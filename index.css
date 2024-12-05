@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    color: black;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-image: url('/IMAGE/FINALDIWABG.png'); /* Set a background image */
+    background-size: cover; /* Ensure the background covers the entire page */
+    background-position: center; /* Center the background */
+    background-attachment: fixed; /* Fix the background so it does not move */
+    background-repeat: no-repeat; /* Prevent background from repeating */
+}
+
+/* Add a transparent overlay over the background */
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.141); /* White overlay with transparency */
+    z-index: -1; /* Place it behind the content */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+header .logo img {
+    height: 20%; /* Keep or adjust height as needed */
+    width: 25%;  /* Set equal width to make it circular */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image scales to cover the entire circle */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for the hover effect */
+    cursor: pointer; /* Pointer cursor to indicate it's clickable */
+}
+
+nav ul li a:hover {
+    color: #1e3706; /* Change color on hover */
+    font-weight: bold; /* Keep it bold on hover */
+}
+
+/* Style for the HR line */
+hr {
+    border: none;
+    height: 2px;
+    background-color: white;
+    width: 100%;
+    margin-top: 0%;
+}
+
+/* Main Content Styles */
+.gallery-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1; /* Make sure content stays above the background */
+}
+
+.gallery-image img {
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+/* Image hover effect */
+.gallery-image img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.gallery-info {
+    max-width: 600px;
+    text-align: justify;
+}
+
+.gallery-info h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1e3706;
+}
+
+.gallery-info p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Hide sections initially */
+.hidden {
+    display: none;
+}
+
+/* ABOUT US section styling */
+.about-us {
+    display: none; /* Keep it hidden initially */
+    flex-direction: column;
+    text-align: justify;
+    width: 80%;
+    margin: 20px auto; /* Center the section */
+}
+
+.about-us h1 {
+    color: #1e3706;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.team {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.team-member {
+    text-align: center;
+    color: #333;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ddd;
+}
+
+.team-member h3 {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.team-member span {
+    font-size: 0.9em;
+    color: #1e1b1b;
+}
+
+/* Contact Section */
+#contact {
+    background-image: url('/mnt/data/461261657_3288452637953012_8650316466950921584_n.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #1e3706; /* Changed text color to #6b8e23 */
+    padding: 60px;
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the left */
+}
+
+#contact .content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    text-align: left;
+    color: #1e3706; /* Ensure all text is this color */
+}
+
+#contact h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #1e3706; /* Ensure heading is also in this color */
+}
+
+#contact p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #1e3706;
+}
+
+#contact a {
+    color: #1e3706;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+#contact a:hover {
+    color: #333;
+}
+
+/* Icons */
+.icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.icon img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Centered Copyright Style */
+.copyright {
+    position: absolute;
+    bottom: -100px; /* Position it near the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px; /* Adjusted font size to make it smaller */
+    color: #1e3706; /* Same olive green color */
+    text-align: center;
+}
+
+/* Footer Styling */
+.footer {
+background-color: #f3f4f6; /* Light gray background */
+padding: 0; /* Remove default padding for the main footer */
+font-family: Arial, sans-serif;
+color: #1e1e1e;
+}
+
+/* Green header section */
+.footer-header {
+background-color: #1e3706; /* Green background */
+padding: 20px;
+text-align: center;
+color: white;
+}
+
+.footer-header h2 {
+font-size: 20px;
+font-weight: bold;
+margin: 0;
+color: white;
+}
+
+/* Footer content */
+.footer-container {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap; /* Makes it responsive */
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
+background-color: #f3f4f6;
+}
+
+.footer-section {
+flex: 1; /* Equal width for all sections */
+min-width: 200px; /* Ensures it fits smaller screens */
+margin: 10px;
+}
+
+.footer-section h4 {
+font-size: 18px;
+font-weight: bold;
+margin-bottom: 8px;
+color: #1e3706; /* Slight green for headers */
+}
+
+.footer-section p {
+font-size: 14px;
+margin: 5px 0;
+color: #4a4a4a;
+}
+
+/* Footer bottom section */
+.footer-bottom {
+text-align: center;
+font-size: 12px;
+margin-top: 10px;
+color: #606060;
+padding: 10px;
+background-color: #e5e7eb; /* Light gray background for the bottom */
+border-top: 1px solid #d1d5db; /* Divider line */
+}
+/* Responsive Design for Phones */
+@media only screen and (max-width: 768px) {
+/* General Styles */
+body {
+background-size: cover; /* Ensure the background adjusts to smaller screens */
+padding: 10px;
+}
+
+/* Header Styles */
+header {
+flex-direction: column; /* Stack logo and nav links */
+align-items: flex-start;
+padding: 10px;
+}
+
+header .logo img {
+height: 60px;
+width: 60px; /* Smaller circular logo */
+}
+
+nav ul {
+flex-direction: column; /* Stack links vertically */
+gap: 10px;
+align-items: flex-start;
+}
+
+nav ul li a {
+font-size: 16px;
+}
+
+/* Main Content */
+.gallery-container {
+flex-direction: column; /* Stack image and text */
+padding: 20px;
+align-items: center;
+text-align: center;
+}
+.gallery-info {
+max-width: 600px;
+text-align: justify;
+background-color: rgba(255, 255, 255, 0.8); /* Light background with transparency */
+padding: 20px; /* Adds padding inside the background */
+border-radius: 10px; /* Rounded corners */
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+}
+
+.gallery-image img {
+width: 90%; /* Adjust image size */
+height: auto;
+}
+
+.gallery-info h1 {
+font-size: 40px;
+font-weight: 700;
+margin-bottom: 20px;
+color: #1e3706;
+}
+
+.gallery-info p {
+font-size: 18px;
+line-height: 1.5;
+color: black;
+}
+
+/* About Us Section */
+.about-us {
+width: 100%; /* Full width */
+padding: 10px;
+text-align: center;
+}
+
+.about-us h1 {
+font-size: 20px;
+}
+
+.about-us p {
+font-size: 14px;
+}
+
+.team {
+flex-direction: column; /* Stack team members */
+gap: 20px;
+}
+
+.team-member img {
+width: 80px;
+height: 80px;
+}
+
+.team-member h3 {
+font-size: 14px;
+}
+
+.team-member span {
+font-size: 12px;
+}
+
+/* Contact Section */
+#contact {
+padding: 20px;
+}
+
+#contact h1 {
+font-size: 24px;
+}
+
+#contact p, #contact a {
+font-size: 14px;
+}
+
+.icon {
+flex-direction: row; /* Adjust layout for icons */
+gap: 10px;
+}
+
+.icon img {
+width: 30px;
+height: 30px;
+}
+
+/* Footer Styles */
+.footer-container {
+flex-direction: column; /* Stack sections */
+text-align: left;
+padding: 20px;
+}
+
+.footer-section {
+margin: 10px 0;
+}
+
+.footer-section h4 {
+font-size: 16px;
+}
+
+.footer-section p {
+font-size: 12px;
+}
+
+.footer-bottom {
+font-size: 10px;
+}
+}

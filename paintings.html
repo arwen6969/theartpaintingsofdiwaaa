@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diwa ng Tarlac Gallery</title>
+    <script src="paintings.js"></script>
+    <link rel="shortcut icon" href="/IMAGE/ficon.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="paintings.css">
+
+</head>
+<body class="bg-white text-gray-800">
+
+    
+    <main>
+        <div class="relative">
+            <div class="relative bg-cover bg-center" style="background-image: url('/IMAGE/FINALDIWABG.png'); height: 100vh;">
+                <header>
+                    <!-- ========== HEADER ========== -->
+                        <div class="max-w-7xl mx-auto px-5 flex items-center border-b-2 border-gray-100">
+                            <!-- Logo -->
+                            <div class="logo flex-shrink-0">
+                                <!-- Dynamically sized logo -->
+                                <img src="/IMAGE/anona.jpg.png" alt="Gallery Logo" class="h-32 w-auto">
+                            </div>
+                            <!-- Navigation Menu -->
+                            <nav class="ml-auto flex space-x-5">
+                                <a href="index.html" id="homeLink">HOME</a>
+                                <a href="/about.html" class="text-gray-800 hover:text-gray-600">ABOUT US!</a>
+                                <a href="/contact.html" class="text-gray-800 hover:text-gray-600">CONTACT</a>
+                                <a href="paintings.html" id="paintingsLink">PAINTINGS</a>
+                            </nav>
+                        </div>
+                    </header>
+                
+                <div id="slider">
+                    <input type="radio" name="slider" id="slide1" checked>
+                    <input type="radio" name="slider" id="slide2">
+                    <input type="radio" name="slider" id="slide3">
+                    <input type="radio" name="slider" id="slide4">
+                    <div id="slides">
+                        <div id="overflow">
+                            <div class="inner">
+                                <div class="slide slide_1">
+                                    <h2>PORTRAITS</h2>
+                                </div>
+                                <div class="slide slide_2">
+                                    <h2>LANDSCAPES</h2>
+                                </div>
+                                <div class="slide slide_3">
+                                    <h2>ABSTRACT</h2>
+                                </div>
+                                <div class="slide slide_4">
+                                    <h2>HISTORICAL</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Section Title -->
+        <section class="bg-green-900 p-6 text-center text-white">
+            <h2 class="text-2xl mb-2">Have a look at our</h2>
+            <h3 class="text-5xl font-bold">ART GALLERY</h3>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 grid grid-cols-2 gap-8 pb-8">
+            <!-- Gallery Item 1 -->
+
+            <div class="gallery-item bg-white p-4 shadow">
+                <img src="/IMAGE/image5.jpg" alt="Impressionist oil painting of a tranquil path through an autumn forest" class="w-full mb-2 cursor-pointer" onclick="showModal(this.src)">
+                <h4 class="text-lg font-semibold mb-1">Burn Out</h4>
+                <p class="text-sm text-gray-600">Illaijah V. Ortoza (Tarlac | 2024)</p>
+                <p>Acrylic on Canvas | Portrait</p>
+            </div>
+            
+            <div class="gallery-item bg-white p-4 shadow">
+                <img src="/IMAGE/image4.jpg" alt="Impressionist oil painting of a tranquil path through an autumn forest" class="w-full mb-2 cursor-pointer" onclick="showModal(this.src)">
+                <h4 class="text-lg font-semibold mb-1">Ideya at Pag-aalinlangan</h4>
+                <p class="text-sm text-gray-600">Jade Suba (Capas | 2024)</p>
+                <p>Oil and Graphite | Portrait</p>
+            </div>
+
+            <div class="gallery-item bg-white p-4 shadow">
+                <img src="/IMAGE/image6.jpg" alt="Impressionist oil painting of a tranquil path through an autumn forest" class="w-full mb-2 cursor-pointer" onclick="showModal(this.src)">
+                <h4 class="text-lg font-semibold mb-1">Steadfast</h4>
+                <p class="text-sm text-gray-600">Edsel L. Naticidad (Tarlac | 2024)</p>
+                <p>Acrylic on Canvas | Portrait</p>
+            </div>
+            
+            <div class="gallery-item bg-white p-4 shadow">
+                <img src="/IMAGE/image7.jpg" alt="Impressionist oil painting of a tranquil path through an autumn forest" class="w-full mb-2 cursor-pointer" onclick="showModal(this.src)">
+                <h4 class="text-lg font-semibold mb-1">Paraluman</h4>
+                <p class="text-sm text-gray-600">Adrian D. Silva (Tarlac | 2024)</p>
+                <p>Watercolor on A4 Frame | Portrait</p>
+            </div>
+
+            <div class="gallery-item bg-white p-4 shadow">
+                <img src="/IMAGE/image8.jpg" alt="Impressionist oil painting of a tranquil path through an autumn forest" class="w-full mb-2 cursor-pointer" onclick="showModal(this.src)">
+                <h4 class="text-lg font-semibold mb-1">Dubrovnik nights</h4>
+                <p class="text-sm text-gray-600">Rudy Yu (Muntinlupa | 2016)</p>
+                <p>Mixed Media of Threated Canvas | Abstract</p>
+            </div>
+            
+            <div class="gallery-item bg-white p-4 shadow">
+                <img src="/IMAGE/image9.jpg" alt="Impressionist oil painting of a tranquil path through an autumn forest" class="w-full mb-2 cursor-pointer" onclick="showModal(this.src)">
+                <h4 class="text-lg font-semibold mb-1">Triumph 7</h4>
+                <p class="text-sm text-gray-600">Kublai Millan (Muntinlupa | 2024)</p>
+                <p>Acrylic on Canvas | Abstract</p>
+            </div>
+
+            <div class="gallery-item bg-white p-4 shadow">
+                <img src="/IMAGE/image10.jpg" alt="Impressionist oil painting of a tranquil path through an autumn forest" class="w-full mb-2 cursor-pointer" onclick="showModal(this.src)">
+                <h4 class="text-lg font-semibold mb-1">TNACNR87</h4>
+                <p class="text-sm text-gray-600">Lino Berro Jamisola (Tarlac | 2024)</p>
+                <p>Oil on Canvas | Abstract</p>
+            </div>
+            
+            <div class="gallery-item bg-white p-4 shadow">
+                <img src="/IMAGE/image11.jpg" alt="Impressionist oil painting of a tranquil path through an autumn forest" class="w-full mb-2 cursor-pointer" onclick="showModal(this.src)">
+                <h4 class="text-lg font-semibold mb-1">Triumph 2</h4>
+                <p class="text-sm text-gray-600">Kublai Millan (Tarlac | 2024)</p>
+                <p>Acrylic on Canvas | Abstract</p>
+            </div>
+
+            <div class="gallery-item bg-white p-4 shadow">
+                <img src="/IMAGE/image12.jpg" alt="Impressionist oil painting of a tranquil path through an autumn forest" class="w-full mb-2 cursor-pointer" onclick="showModal(this.src)">
+                <h4 class="text-lg font-semibold mb-1">Full Moon in Caption</h4>
+                <p class="text-sm text-gray-600">Helena Alegre (Muntinlupa | 2024)</p>
+                <p>Oil on Canvas | Landscape</p>
+            </div>
+            
+            <div class="gallery-item bg-white p-4 shadow">
+                <img src="/IMAGE/image13.jpg" alt="Impressionist oil painting of a tranquil path through an autumn forest" class="w-full mb-2 cursor-pointer" onclick="showModal(this.src)">
+                <h4 class="text-lg font-semibold mb-1">Cumulonimbus</h4>
+                <p class="text-sm text-gray-600">Airin D. Sitiji (Muntinlupa | 2024)</p>
+                <p>Oil on Canvas | Landscape</p>
+            </div>
+            
+            <div class="gallery-item bg-white p-4 shadow">
+                <img src="/IMAGE/image14.jpg" alt="Impressionist oil painting of a tranquil path through an autumn forest" class="w-full mb-2 cursor-pointer" onclick="showModal(this.src)">
+                <h4 class="text-lg font-semibold mb-1">The Queen of the Night</h4>
+                <p class="text-sm text-gray-600">Helena Alegre (Muntinlupa | 2024)</p>
+                <p>Oil on Canvas | Landscape</p>
+            </div>
+            
+            <div class="gallery-item bg-white p-4 shadow">
+                <img src="/IMAGE/image15.jpg" alt="Impressionist oil painting of a tranquil path through an autumn forest" class="w-full mb-2 cursor-pointer" onclick="showModal(this.src)">
+                <h4 class="text-lg font-semibold mb-1">Dapit Hapun</h4>
+                <p class="text-sm text-gray-600">Mark Belicario (Muntinlupa | 2024)</p>
+                <p>Oil on Canvas | Landscape</p>
+            </div>
+
+            <div class="gallery-item bg-white p-4 shadow">
+                <img src="/IMAGE/image16.jpg" alt="Impressionist oil painting of a tranquil path through an autumn forest" class="w-full mb-2 cursor-pointer" onclick="showModal(this.src)">
+                <h4 class="text-lg font-semibold mb-1">Peaceful Path</h4>
+                <p class="text-sm text-gray-600">Fernando B. Sena (Tarlac | 2024)</p>
+                <p>Acrylic on Canvas | Landscape</p>
+            </div>
+            
+            <div class="gallery-item bg-white p-4 shadow">
+                <img src="/IMAGE/image17.jpg" alt="Impressionist oil painting of a tranquil path through an autumn forest" class="w-full mb-2 cursor-pointer" onclick="showModal(this.src)">
+                <h4 class="text-lg font-semibold mb-1">Forbearance</h4>
+                <p class="text-sm text-gray-600">Renee Avila (Tarlac | 2024)</p>
+                <p>Oil on Canvas | Historical</p>
+            </div>
+
+            <div class="gallery-item bg-white p-4 shadow">
+                <img src="/IMAGE/image18.jpg" alt="Impressionist oil painting of a tranquil path through an autumn forest" class="w-full mb-2 cursor-pointer" onclick="showModal(this.src)">
+                <h4 class="text-lg font-semibold mb-1">Five Loaves, Two Fishes III</h4>
+                <p class="text-sm text-gray-600">Fernando B. Sena (Tarlac | 2024)</p>
+                <p>Acrylic on Canvas | Historical</p>
+            </div>
+            
+            <div class="gallery-item bg-white p-4 shadow">
+                <img src="/IMAGE/image19.jpg"alt="Impressionist oil painting of a tranquil path through an autumn forest" class="w-full mb-2 cursor-pointer" onclick="showModal(this.src)">
+                <h4 class="text-lg font-semibold mb-1">Kaligayahan Noon</h4>
+                <p class="text-sm text-gray-600">Mark Kenneth S. Garcia (Muntinlupa | 2024)</p>
+                <p>Acrylic on Canvas | Historical</p>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- ========== MODAL ========== -->
+    <div class="modal" id="imageModal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="Zoomed artwork">
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-header">
+            <h2>The Art Gallery of Diwa ng Tarlac</h2>
+        </div>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>The Art Gallery of Diwa ng Tarlac</h4>
+                <p>FHMQ+256, Romulo Blvd,</p>
+                <p>Tarlac City, Tarlac</p>
+            </div>
+            <div class="footer-section">
+                <h4>Web Pages</h4>
+                <p>Landing Page</p>
+                <p>Home</p>
+                <p>About Us!</p>
+                <p>Contacts</p>
+                <p>Paintings</p>
+            </div>
+            <div class="footer-section">
+                <h4>Art Gallery</h4>
+                <p>Paintings</p>
+                <p>Title</p>
+                <p>Artist</p>
+                <p>Genre</p>
+            </div>
+            <div class="footer-section">
+                <h4>Social</h4>
+                <p>Diwa Ng Tarlac, San Vicente, Tarlac City</p>
+                <p> <a href="mailto:Diwangtarlac@gmail.com"></a>Diwangtarlac@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © PANCHO-QUITALIG-GAMUNDOY-CALMA-VELASCO
+        </div>
+    </footer>
+</body>
+</html>
+
+
